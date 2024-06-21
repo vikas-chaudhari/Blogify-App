@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("partials/head.ejs") %>
+
+    <body>
+
+        <%- include("partials/navbar.ejs") %>
+
+        <div class="container">
+            <form class="m-5" method="post" action="/user/signup" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Fullname</label>
+                    <input type="text" id="fullName" class="form-control" name="fullName">
+                </div>
+
+                <label for="profileImage" class="mb-2">Profile Image</label>
+                <div class="input-group mb-3">
+                    <input type="file" name="profileImage" class="form-control" id="profileImage"
+                        area-describedby="coverImage">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" id="email" class="form-control" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" name="password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+        </div>
+
+        <%- include("partials/scripts.ejs") %>
+
+    </body>
+
+</html>
